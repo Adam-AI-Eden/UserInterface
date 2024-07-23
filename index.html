@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Assisted Job Posting Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="intercessionlogo.png" alt="Company Logo" class="logo">
+            <h1>Smart Job Posting Assistant</h1>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <form id="jobPostingForm">
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="jobTitle">Job Title</label>
+                        <div class="input-group">
+                            <input type="text" id="jobTitle" name="jobTitle" required>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="department">Department or Agency</label>
+                        <div class="input-group">
+                            <input type="text" id="department" name="department" required>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location</label>
+                        <div class="input-group">
+                            <input type="text" id="location" name="location" required>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="salaryRange">Salary Range</label>
+                        <div class="input-group">
+                            <input type="range" id="salaryRange" name="salaryRange" min="20000" max="200000" step="1000" value="50000">
+                            <output for="salaryRange" id="salaryOutput">$50,000</output>
+                            
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="employmentType">Employment Type</label>
+                        <div class="input-group">
+                            <select id="employmentType" name="employmentType" required>
+                                <option value="">Select an option</option>
+                                <option value="fullTime">Full-time</option>
+                                <option value="partTime">Part-time</option>
+                                <option value="temporary">Temporary</option>
+                                <option value="permanent">Permanent</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="positionSummary">Position Summary or Overview</label>
+                        <div class="input-group">
+                            <textarea id="positionSummary" name="positionSummary" required></textarea>
+                            <button type="button" class="assist-btn" data-field="positionSummary" title="Get assistance for Position Summary"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="keyResponsibilities">Key Responsibilities</label>
+                        <div class="input-group">
+                            <textarea id="keyResponsibilities" name="keyResponsibilities" required></textarea>
+                            <button type="button" class="assist-btn" data-field="keyResponsibilities" title="Get assistance for Key Responsibilities"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="minQualifications">Minimum Qualifications</label>
+                        <div class="input-group">
+                            <textarea id="minQualifications" name="minQualifications" required></textarea>
+                            <button type="button" class="assist-btn" data-field="minQualifications"  title="Get assistance for Minimum Qualifications"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="prefQualifications">Preferred Qualifications</label>
+                        <div class="input-group">
+                            <textarea id="prefQualifications" name="prefQualifications"></textarea>
+                            <button type="button" class="assist-btn" data-field="prefQualifications" title="Get assistance for Preferred Qualifications"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="requiredEducation">Required Education</label>
+                        <div class="input-group">
+                            <input type="text" id="requiredEducation" name="requiredEducation" required>
+                            <button type="button" class="assist-btn" data-field="requiredEducation" title="Get assistance for Required Education"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="requiredExperience">Required Experience</label>
+                        <div class="input-group">
+                            <input type="text" id="requiredExperience" name="requiredExperience" required>
+                            <button type="button" class="assist-btn" data-field="requiredExperience" title="Get assistance for Required Experience"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group full-width">
+                        <label for="essentialSkills">Essential Skills</label>
+                        <div class="input-group">
+                            <textarea id="essentialSkills" name="essentialSkills" required></textarea>
+                            <button type="button" class="assist-btn" data-field="essentialSkills" title="Get assistance for Essential Skills"><i class="fas fa-robot"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="applicationDeadline">Application Deadline</label>
+                        <div class="input-group">
+                            <input type="date" id="applicationDeadline" name="applicationDeadline" required>
+                            
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Submit Job Posting</button>
+            </form>
+        </main>
+    </div>
+
+    <div id="aiAssistantPopup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h2>AI Assistant</h2>
+            <p id="assistantContext"></p>
+            <div id="aiChat"></div>
+            <div class="input-group">
+                <input type="text" id="userInput" placeholder="Ask for assistance...">
+                <button id="sendQuery"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Check if user is logged in
+        if (localStorage.getItem('isLoggedIn') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
+</body>
+</html>

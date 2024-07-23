@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitor Registration - The Career Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="guest-container">
+        <div class="header">
+            <img src="intercessionlogo.png" alt="Company Logo" class="logo">
+            <h2>Visitor Registration</h2>
+        </div>
+        <div class="disclosure-container">
+            <h3>Privacy and User Agreement</h3>
+            <p>By using The Career Assistant, you agree to the following terms and conditions:</p>
+            <ol>
+                <li>Your anonymity is our priority. We protect your identity and personal information. You will not be identified as a candidate without your express, written permission.</li>
+                <li>Our goal is to assist your career growth and help you find suitable employment opportunities.</li>
+                <li>By signing up, you affirm that you are either:
+                    <ul>
+                        <li>Currently employed in the public sector, or</li>
+                        <li>Interested in pursuing public sector employment opportunities</li>
+                    </ul>
+                </li>
+                <li>You declare that you are not a recruiter or any party attempting to identify opportunities or candidates surreptitiously.</li>
+                <li>The Career Assistant is for individual career development only. Any other use is prohibited.</li>
+                <li>We reserve the right to terminate your access if we believe you are violating these terms.</li>
+            </ol>
+            <p>By proceeding, you acknowledge that you have read, understood, and agree to these terms and conditions.</p>
+        </div>
+
+        <div class="form-container">
+            <form id="guestForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="loginId">Login ID:</label>
+                    <input type="text" id="loginId" name="loginId" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password:</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                    <label for="agreeTerms">I have read and agree to the Privacy and User Agreement</label>
+                </div>
+                <button type="submit">Submit Registration</button>
+            </form>
+        </div>
+    </div>
+    <script src="guest.js"></script>
+</body>
+</html>

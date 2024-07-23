@@ -1,0 +1,347 @@
+/* General styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Welcome page styles */
+.welcome-container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Adjust as needed */
+    text-align: center;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #666;
+    text-align: center !important;
+}
+
+.footer-content {
+    margin: 0 auto !important;
+}
+
+.welcome-container .logo {
+    display: block;
+    margin: 0 auto 30px;
+    max-width: 300px;
+    height: 26px;
+}
+
+.welcome-container h1 {
+    color: gray;
+    margin-bottom: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    width: 100%;
+    text-align: center; 
+}
+
+.welcome-container p {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 18px;
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+#welcome-heading {
+    color: gray !important;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 30px;
+    width: 100%;
+}
+
+#welcome-heading .welcome-line,
+#welcome-heading .assistant-line {
+    display: block;
+    width: 100%;
+    text-align: center; /* Add this line to ensure each line is centered */
+}
+
+#welcome-heading .welcome-line {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+#welcome-heading .assistant-line {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+/* Button styles */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #ecf0f1;
+    color: #34495e;
+}
+
+.btn-secondary:hover {
+    background-color: #bdc3c7;
+}
+
+/* Guest page styles */
+.guest-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.header {
+    background-color: white;
+    color: gray;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin: 0;
+    color: gray !important;
+    margin-bottom: 20px;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, "Times New Roman", serif;
+    font-size: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+/* Disclosure container styles */
+.disclosure-container {
+    flex: 1;
+    background: color #333;;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 200px;
+    margin-left: 200px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #333;
+    text-align: justify;
+}
+
+.disclosure-container h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.disclosure-container p {
+    margin-bottom: 5px;
+}
+
+.disclosure-container ol {
+    padding-left: 20px;
+    margin-bottom: 5px;
+}
+
+.disclosure-container ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.disclosure-container li {
+    margin-bottom: 5px;
+}
+
+.disclosure-container ul li {
+    margin-bottom: 5px;
+}
+
+/* Form styles */
+.form-container {
+    flex: 1;
+    margin-top: 0px;
+    padding: 10px;
+    margin-right: 600px;
+    margin-left: 200px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-container {
+    flex: 1;
+    background: color #333;;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+    line-height: 1.2;
+    color: #333;
+    text-align: center;
+    max-width: 400px;
+    height: 400px;
+
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .disclosure-container {
+        margin-right: 0;
+        margin-bottom: 20px;
+        height: 300px;
+    }
+}
+
+#guestForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#guestForm .form-group {
+    margin-bottom:6px;
+}
+
+#guestForm label {
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+#guestForm input[type="text"],
+#guestForm input[type="password"] {
+    padding: 6px 8px;
+    font-size: 14px;
+}
+
+#guestForm .checkbox-group {
+    margin-top: 0;
+    margin-bottom: 5;
+}
+
+#guestForm .checkbox-group label {
+    font-size: 13px;
+}
+
+#guestForm button {
+    padding: 8px;
+    margin-top: 5px;
+}
